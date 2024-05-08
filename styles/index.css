@@ -1,0 +1,682 @@
+
+.cover {
+    background: #000000;
+    z-index: 9999999;
+    position: fixed;
+    top: 0%;
+    left: -25%;
+    width: 150%;
+    height: 100%;
+    transform-origin: left;
+    animation: cover_ani 2s both cubic-bezier(0.77,0,0.175,1);
+}
+
+@keyframes cover_ani {
+    0% {
+        transform: scaleX(1) skewX(30deg);
+        transform-origin: left;
+    }
+    100% {
+        transform: scaleX(0) skewX(30deg);
+        transform-origin: left;
+    }
+}
+
+.cover_second {
+    z-index: 999;
+    position: fixed;
+    width: 100vw;
+    height: 100vh; background: rgb(255, 255, 255);
+    animation-name: cover2;
+    animation-duration: 3s;
+    animation-delay: 4.8s;
+    animation-fill-mode: both;
+}
+
+
+.cover_second span{
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    transform: translate(-29%, -50%);
+    font-weight: 700;
+    font-size: 5rem;
+    color: #000000;
+    animation-name: cover_text;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+}
+@keyframes cover2 {
+    0%{transform: translateX(0);}
+    100%{transform: translateX(-3000px);}
+} 
+
+@keyframes cover_text {
+    0%{opacity: 0; scale: 0.1;}
+    100%{opacity: 1; scale: 1;}
+}
+
+
+body .header_title {
+    position: fixed;
+    left: 5%;
+    top: 40px;
+    z-index: 998;
+}
+body .header_title a {
+    border-radius: 10px;
+    font-size: 2rem;
+    padding: 10px 20px;
+    color: #938c8c;
+    display: flex;
+    font-weight: 700;
+}
+body .header_title a img {
+    width: 40px; margin-right: 10px;
+}
+.mouse {
+    position: absolute;
+    left: 50%;
+    top: 85%;
+}
+
+.mouse_cuser{
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 15px;
+    background: rgb(118 118 118);
+    position: absolute; right: 47.93%; top: 14px;
+    animation: mouse 1s infinite;
+}
+@keyframes mouse {
+    0%{transform: translateY(-3PX);}
+    100%{transform: translateY(5px);}
+}
+
+.mouse_background {
+    content: "";
+    display: inline-block;
+    width: 35px;
+    height: 48px;
+    border: 3px solid rgb(118 118 118);
+    border-radius: 15px 
+}
+
+.circle{
+    z-index: 99999;
+    width: 50px; height: 50px;
+    border: 2px solid #a5a5a5;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: bottom;
+    position: fixed;  
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+    transition: 0.1 s;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
+    /* 메뉴  */
+
+.menu_nav {
+    width: 100vw;
+    height: 100vh;
+    position: fixed; z-index: 997;
+    left: 0; top: 0;
+    transform: translateX(-3000px);
+}
+
+.menu_wrap {
+    display: flex; flex-flow: column nowrap;
+    height: 100vh;
+}
+
+.menu_bg {
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.7);
+    border-bottom: 1px solid #2b2b2b;
+    width: 100%;
+    height: 25%;
+     justify-content: center;
+    display: flex; align-items: center;
+    /* transition: 0.5s; */
+    cursor: pointer;
+    transform: translateX(-3000px);
+}
+.menu_bg a{
+    color: #5a5959;
+    font-size: 4rem;
+    transition: 1s;
+    font-weight: bold;
+}
+
+
+.menu_first {transition: 1.3s;}
+.menu_second{transition: 1.8s;}
+.menu_third{transition: 2.2s;}
+.menu_five{transition: 2.5s;}
+
+
+
+.menu_bg a:hover{
+    color: #fff;
+    transition: 0.5s;
+}
+
+
+
+
+
+
+
+
+/* 네이바 */
+.nav_bar {
+    z-index: 998;
+    position: fixed;
+    right: 70px;
+    top: 59px;
+  }
+
+  .nav_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu {
+    cursor: pointer;
+    width: 25px;
+    height: 30px;
+    position: relative;
+  }
+
+  .menu.active .bar {
+    position: absolute;
+  }
+  .menu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .menu.active .bar:first-child {
+    top: 25%;
+    transform: rotate(45deg);
+  }
+  .menu.active .bar:last-child {
+    top: 25%;
+    transform: rotate(-45deg);
+  }
+
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color:#a5a5a5;
+    margin: 6px 0;
+    transition: 0.5s;
+  }
+
+
+
+/* 메인 */
+main .welcome_page {
+    background: #000;
+    width: 100vw;
+    text-align: center;
+    position: relative;
+    height: 100vh;
+    }
+.main_banner2 {
+    color: #fff; font-size: 7rem; font-weight: bolder;
+    text-align: left;
+    position: absolute;
+    bottom: 20%;       
+    left: 10%; 
+    animation-name:opacity_scale;
+    animation-duration: 3s;
+    animation-delay: 5.5s;
+    font-family: "Fahkwang", arial, sans-serif;
+}
+@keyframes opacity_scale {
+    0%{opacity: 0;   transform: translateX(-200px);}
+    100%{opacity: 1;    transform: translateX(0);}
+}
+
+main .introduction {
+    opacity: 0;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    transition: 3s;
+}
+
+
+main .introduction .introduction_wrap {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    transform: translateY(50%);
+}
+
+main .introduction .introduction_wrap .introduction_text{}
+main .introduction .introduction_wrap .introduction_text p{    
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 41px;
+    color: #fff;}
+main .introduction .introduction_wrap .introduction_text h1{
+    font-size: 3rem; color: #fff;font-weight: 700;margin-bottom: 50px ; 
+    background:linear-gradient(to right,#000000,#ffffff,#000000,#ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    animation: text_bg 15s linear infinite;
+    font-family: "Fahkwang", arial, sans-serif;
+}
+@keyframes text_bg {
+    0%{background-position-x: 100% ;}
+    100%{background-position-x: 400% ;}
+}
+main .introduction .photo {
+    position: relative;
+    transform: translateX(15%);
+}  
+main .introduction .photo img{    
+    opacity: 0;
+    width: 55%;
+    border-radius: 90px;}
+main .introduction .photo h2 {
+        font-size: 2rem;
+        position: absolute;
+        left: 18%;
+        top: 30%;
+        display: inline;
+        color: #fff;
+        border:  3px solid #fff;
+        border-radius: 50%;
+        padding: 40px 15px ;
+        cursor: pointer;
+}
+main .introduction .photo h2:hover{
+    background: #fff;
+    color: #000000;
+    transition:0.5s;
+}
+
+/* who_been */
+.who_been {
+    width: 100vw; height: 100vh;
+    position: relative; 
+    background: #000;
+    transition: 2s;
+}
+
+.no_1 {
+    position: absolute; right: 10%; top: 20%;
+    display: flex   ;
+}
+.no_1 span {
+    font-size: 9rem;
+    font-family: "Bodoni Moda", serif;
+    display: flex; 
+}
+
+.who_been .who_span {
+    position: absolute; left: 10%;
+    bottom: 20%; display: flex;
+}
+.who_been .who_span span {
+    display: flex;
+    font-family: "Bodoni Moda", serif;
+    font-size: 5rem; font-weight: bold;
+}
+
+.who_pad {
+ margin-right: 40px;
+}
+/* project_title */
+main .project_title {
+    background: #000;
+    width: 100%; height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+}
+
+main .project_title h1 {
+    font-family: "Fahkwang", arial, sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 4rem;
+}
+
+
+
+
+
+/* project */
+main .project {
+    background: #000;
+}
+
+main .project .project_wrap {   
+}
+
+main .project .project_wrap .project_box {
+    padding-top: 150px; padding-left: 100px; padding-bottom: 100px;
+    cursor: pointer;
+    transition: 1s;
+    width: 100%; height: 100vh;
+    position: sticky; left: 0; top: 0;
+}
+
+main .project .project_wrap .project_box h2 img{
+    width: 30%
+}
+
+main .project .project_wrap .project_box .project_all {
+display: flex; align-items: center;
+justify-content: center;
+}
+main .project .project_wrap .project_box .project_text {
+    color: #fff; line-height: 70px; font-weight: 600; font-size: 1.25rem;
+}
+main .project .project_wrap .project_box .project_text span{
+    color: #fff;font-weight: 600; padding-left: 30px;
+    font-size: 1.1rem;
+}
+.project_left {
+    transform: translateX(20%);
+}
+main .project .project_wrap .project_box h2{
+    margin-bottom: 10%;
+}
+main .project .project_wrap .project_box .project_skill {
+    margin-top: 20px;
+}
+main .project .project_wrap .project_box .project_skill span {
+    color: #737272;
+} 
+main .project .project_wrap .project_box .project_figma {
+    margin-top: 30px;
+}
+main .project .project_wrap .project_box .project_figma a {
+    border: 1px solid #fff;
+    border-bottom: 3px solid #fff;
+    border-right: 3px solid #fff;
+    padding: 3px;
+    font-weight: 700;
+    color: #fff;
+    margin-right: 20px;
+    transition: 0.5s;
+}
+main .project .project_wrap .project_box .project_figma a:hover{
+    color: #000;
+    background: #fff;
+    border: 1px solid #a5a5a5;
+    border-bottom: 3px solid #a5a5a5;
+    transition: 0.5s;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transform: scale(1.2);
+}
+
+main .project .project_wrap .project_box .project_right {
+    width:40% ;
+}
+
+main .project .project_wrap .project_box .project_right .project_site{
+    padding-right: 100px;
+}
+main .project .project_wrap .project_box .project_right .project_site img{
+    width: 70%; transform: translateX(40%);
+    transition: opacity 1s ease-in-out;
+}
+
+.project_wavve {z-index: 499;}
+
+.project_calvin {
+    z-index: 500;
+    background: #ffff;
+}
+
+.project_calvin div,.project_calvin a ,.project_calvin span {
+    color: #000 !important; 
+}
+
+.project_calvin a{
+    color: #000;
+}
+.calvin_figma a {
+    border: 1px solid #000 !important;
+}
+.calvin_figma a:hover{
+    background: #000 !important;
+    color: #fff !important;
+}
+
+
+/* been_info */
+.been_imfo {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    transition: 2s;
+}
+
+.no_2 {
+    position: absolute; right: 10%; top: 20%;
+    display: flex; flex-flow: row;
+}
+.no_2 span {
+    font-size: 9rem;
+    font-family: "Bodoni Moda", serif;
+    display: flex; flex-flow: row;
+}
+
+
+
+.been_contact {
+    position: absolute; left: 10%;
+    bottom: 20%;
+}
+.been_contact span{
+    font-family: "Bodoni Moda", serif;
+    font-size: 5rem; font-weight: bold;
+}
+
+/* 마지막 */
+main .last_contents {
+    width: 100vw;
+    height: 100vh;
+    background: #000; text-align: center;
+    background-size: cover;
+    background-position: center ;
+    position: relative;
+    opacity: 0;
+    transition: 2s;
+    }
+    main .last_contents h2 {
+        color: #fff;
+    }
+    main .last_contents .tell{
+    display: flex; flex-flow: column;
+    /* padding: 80px 0; background: #000; */
+    }
+    main .last_contents .tell img {
+        margin: 0 auto;
+        width: 200px;
+    }
+    main .last_contents .tell span {
+        font-size: 2rem;
+        color: #fff;
+        padding-bottom: 20px;
+    }
+    main .last_contents .tell .qrcode {
+        border: 1px solid #fff;
+        display: flex; flex-flow: column;
+        margin: 0 auto;
+        width: 300px;
+        padding: 20px 0;
+        border-radius: 20px;
+    }
+    main .last_contents h2 {
+    font-size: 4rem; padding-top: 250px;
+    }
+    
+    main .last_contents p {
+        font-size: 3rem;
+        width: 100%;
+        height: 50px;
+        position: absolute;
+        background-image: url(../images/thank_you.png);
+        color: #000;
+        top:150px;
+        animation: loop 50s infinite linear;
+    }
+    
+    @keyframes loop {
+        0%{background-position-x:0}
+        100%{background-position-x:5000px}
+    }
+    main .last_contents form {
+        margin:  0 auto;
+        width: 700px;
+        display: flex; justify-content: center;
+        flex-flow: row wrap;
+    }
+    main .last_contents label {
+        color: #fff; font-size: 1.5rem;
+        padding-right: 10px;
+    }
+    main .last_contents input {
+        border-radius: 5px;
+        display: flex;
+        padding: 10px;
+        background: #fff;
+        margin-right: 30px;
+    }
+    main .last_contents .message_box{
+        padding-top: 30px;
+        align-items: center;
+        display: flex; flex-flow: column nowrap;
+    }
+    main .last_contents input:nth-of-type(2){
+        margin: 0;
+    }
+    main .last_contents .message_box input{
+        margin: 0 auto;
+        /* padding: 140px; */
+        width: 480px;
+        height: 140px;
+        margin: 0;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* js용 */
+.project_active{
+    transform: scale(1.3);
+    padding: 50px;
+    font-weight: bold;
+    transition: 0.2s;
+    text-align: center;
+    background: #fff;
+    color: #000;
+    font-size: 1.25rem;
+}
+.calvin_active {
+    transform: scale(1.3);
+    padding: 50px;
+    font-weight: bold;
+    transition: 0.2s;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    font-size: 1.25rem;
+    
+}
+
+
+.cover_ani {
+    animation: who_ani 2s both;
+}
+.cover_ani2 {
+    animation: who_ani2 2s both;
+}
+.cover_ani3 {
+    animation: who_ani3 2s both;
+}
+.bounce{
+    animation: bounce 1s both;
+}
+@keyframes who_ani {
+    0%{
+        transform: translateY(200px);
+    }
+    100%{
+        transform: translateY(00px);
+    }
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes who_ani2 {
+    0%{
+        transform: translateX(-200px);
+    }
+    100%{
+        transform: translateX(00px);
+    }
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes who_ani3 {
+    0%{
+        transform: translateY(-200px);
+    }
+    100%{
+        transform: translateY(00px);
+    }
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
