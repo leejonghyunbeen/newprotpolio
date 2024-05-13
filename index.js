@@ -286,3 +286,30 @@ git_link.forEach((target,index)=>{
         window.open(git_figma[index],'_blank')
     })
 })
+
+// 시간
+const time = document.querySelector('.time p ')
+let now = new Date();
+let hour = now.getHours();
+let minutes = now.getMinutes();
+let seconds = now.getSeconds();
+let month = now.getMonth()
+let days = now.getDate()
+time.innerHTML =hour +`:`+(minutes < 10 ? '0':'')+minutes+':'+(seconds < 10 ?'0':'')+seconds+''
+function reload_time(){
+    // 시간 부르기
+    now = new Date();
+    hour = now.getHours();
+    minutes = now.getMinutes();
+    seconds = now.getSeconds();
+    month = now.getMonth()
+    days = now.getDate()
+    days_week = ['일','월','화','수','목','금','토']
+    day_week =days_week[now.getDay()]
+    
+    time.innerHTML =hour +`:`+(minutes < 10 ? '0':'')+minutes+':'+(seconds < 10 ?'0':'')+seconds+''
+    current_date.innerHTML = `${month+1}` +`월 `+(days < 10 ? '0':'') + days+'일 '+day_week + '요일'; 
+}
+window.onload =function(){
+    setInterval(reload_time,1000)
+}

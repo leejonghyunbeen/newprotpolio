@@ -243,7 +243,22 @@ main .welcome_page {
     0%{opacity: 0;   transform: translateX(-200px);}
     100%{opacity: 1;    transform: translateX(0);}
 }
-
+@keyframes opacity_scale2 {
+    0%{opacity: 0;   transform: translateX(200px);}
+    100%{opacity: 1;    transform: translateX(0);}
+}
+.time {
+    position: absolute; right: 10%; 
+    top: 20%;
+    animation-name: opacity_scale2;
+    animation-duration: 3s;
+    animation-delay: 5s;
+}
+.time p {
+    color: #fff;
+    font-size: 3rem;
+    font-family: "Bodoni Moda", serif;
+}
 main .introduction {
     opacity: 0;
     width: 100%;
