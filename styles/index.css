@@ -455,7 +455,22 @@ main .project .project_wrap .project_box .project_right .project_site img{
     color: #fff !important;
 }
 
+.korean {
+    background: #000 ; 
+    z-index: 501;
+}
+.korean_left {
+    margin-right: 130px;
+}
 
+
+.app {
+    background: #203429;
+    z-index: 502;
+}
+.app_all {
+    margin-top: 100px;
+}
 /* been_info */
 .been_imfo {
     width: 100vw;

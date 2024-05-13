@@ -55,6 +55,8 @@ photo_img.addEventListener('mouseout',()=>{
 // project
 const project_wrap = document.querySelectorAll('.project_wavve')
 const project_calvin =document.querySelectorAll('.project_calvin')
+const korean = document.querySelectorAll('.korean')
+const app = document.querySelectorAll('.app')
 for(let i of project_wrap){
     i.addEventListener('mouseover',()=>{
         circle.innerHTML = 'view site'
@@ -77,7 +79,28 @@ for(let i of project_calvin){
         circle.style.transition = '0.2s'
     })
 }
-
+for(let i of app){
+    i.addEventListener('mouseover',()=>{
+        circle.innerHTML = 'view site'
+        circle.classList.add('project_active')
+    })
+    i.addEventListener('mouseout',()=>{
+        circle.innerHTML = ''
+        circle.classList.remove('project_active')
+        circle.style.transition = '0.2s'
+    })
+}
+for(let i of korean){
+    i.addEventListener('mouseover',()=>{
+        circle.innerHTML = 'view site'
+        circle.classList.add('project_active')
+    })
+    i.addEventListener('mouseout',()=>{
+        circle.innerHTML = ''
+        circle.classList.remove('project_active')
+        circle.style.transition = '0.2s'
+    })  
+}
 
 
 // 이미지 변경
@@ -248,7 +271,7 @@ window.addEventListener('scroll',()=>{
 const web_link = document.querySelectorAll('.project_box')
 const git_link =document.querySelectorAll('.figma_link')
 let git_figma =['https://www.figma.com/proto/mxTjr6dFNz8v5gaUhxGVzi/Untitled?page-id=0%3A1&type=design&node-id=1-2&viewport=555%2C526%2C0.02&t=iWMGVQz4esDzeEdq-1&scaling=contain&mode=design','https://github.com/leejonghyunbeen/calvinklein']
-let web_site = ['https://yunaweb.pe.kr/wave_frontend24/#','https://calvinkleinkorea.netlify.app/']
+let web_site = ['https://yunaweb.pe.kr/wave_frontend24/#','https://calvinkleinkorea.netlify.app/','https://koreacinema.netlify.app/','https://www.figma.com/proto/awSRDNw2wSh28Qm1FjveeA/1%EC%A1%B0_%EB%B9%84%EB%A0%8C%EC%8A%A4_%EC%9A%A9%EA%B8%B0%2C%ED%98%84%EB%B9%88%2C%EC%9D%80%EC%A7%80?page-id=0%3A1&node-id=1-70&viewport=2240%2C315%2C0.08&t=hzZpPaDLB5AOtN3L-1&scaling=contain']
 
 web_link.forEach((target,index)=>{
     target.addEventListener('click',()=>{
