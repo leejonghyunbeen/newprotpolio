@@ -127,11 +127,11 @@ body .header_title a img {
     height: 100vh;
     position: fixed; z-index: 997;
     left: 0; top: 0;
-    transform: translateX(-3000px);
+    transform: translateY(-3000px);
 }
 
 .menu_wrap {
-    display: flex; flex-flow: column nowrap;
+    display: flex; flex-flow: row nowrap;
     height: 100vh;
 }
 
@@ -139,15 +139,15 @@ body .header_title a img {
     backdrop-filter: blur(10px);
     background: rgba(0, 0, 0, 0.7);
     border-bottom: 1px solid #2b2b2b;
-    width: 100%;
-    height: 25%;
+    width: 25%;
+    height: 100%;
      justify-content: center;
     display: flex; align-items: center;
     /* transition: 0.5s; */
     cursor: pointer;
-    transform: translateX(-3000px);
+    transform: translateY(-3000px);
 }
-.menu_bg a{
+.menu_bg{
     color: #5a5959;
     font-size: 4rem;
     transition: 1s;
@@ -161,18 +161,19 @@ body .header_title a img {
 .menu_five{transition: 2.5s;}
 
 
-
-.menu_bg a:hover{
+.carry{
+        font-weight: 600;
+    font-size: 1.7rem;
+    line-height: 41px;
     color: #fff;
-    transition: 0.5s;
+    display: flex;
+    /* margin-bottom: 4px; */
 }
-
-
-
-
-
-
-
+.menu_bg:hover {
+    color: #000000;
+    transition: 0.5s;
+    background-color:   #fff ;
+}
 
 /* 네이바 */
 .nav_bar {
@@ -523,7 +524,7 @@ main .last_contents {
     background-size: cover;
     background-position: center ;
     position: relative;
-    opacity: 0;
+    opacity: 1;
     transition: 2s;
     }
     main .last_contents h2 {

@@ -6,12 +6,6 @@ for(let i of all_A){
 }
 
 
-
-
-
-
-
-
 const circle = document.querySelector('.circle')
 window.addEventListener('mousemove',(e)=>{
     console.log(`clienX=${e.clientX}`)
@@ -23,14 +17,6 @@ const menu = document.querySelector(".menu");
 menu.addEventListener('click',()=>{
     menu.classList.toggle("active");
 })
-
-
-
-
-
-
-
-
 
 
 // 자기소개 페이지
@@ -160,22 +146,22 @@ nav_bar.addEventListener('click',()=>{
     console.log(nav_result)
 
     if(nav_result ==false){
-        menu_nav.style.transform = "translateX(0)"
+        menu_nav.style.transform = "translateY(0)"
         menu_bg.forEach((target,index)=>{
-            target.style.transform = "translateX(0)"
+            target.style.transform = "translateY(0)"
         })
 
     }else{
-        menu_nav.style.transform = "translateX(-3000px)"
+        menu_nav.style.transform = "translateY(-3000px)"
         menu_nav.style.transition = '3s'
         menu_bg.forEach((target,index)=>{
-            target.style.transform = "translateX(-3000px)"
+            target.style.transform = "translateY(-3000px)"
         })
     }
 })
 
 const main_bg = document.querySelectorAll('.main_bg')
-const nav_a =document.querySelectorAll('.menu_wrap a')
+const nav_a =document.querySelectorAll('.menu_wrap div')
 main_bg.forEach((obj,index)=>{
     console.log(main_bg[index].offsetTop)
 })
@@ -183,7 +169,7 @@ nav_a.forEach((obj,index)=>{
     obj.addEventListener('click',(e)=>{
         e.preventDefault()
         window.scrollTo(0,main_bg[`${index}`].offsetTop)
-        menu_nav.style.transform = "translateX(-3000px)"
+        menu_nav.style.transform = "translateY(-3000px)"
         menu.classList.toggle("active");
         nav_result = true
     })
